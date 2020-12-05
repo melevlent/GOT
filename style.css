@@ -1,0 +1,322 @@
+@font-face {
+	font-family: GameOfThrones;
+	src: url(font/game-of-thrones/Game-of-Thrones.woff) format("woff");
+	src: url(font/game-of-thrones/Game-of-Thrones.woff2) format("woff2");
+}
+
+body {
+	background-image: url(imgs/throne.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: black;
+}
+
+@media only screen and (max-width: 767px) {
+	body {
+		background-image: url(imgs/throne.jpg);
+	}
+}
+
+.mainNav {
+	margin: 0;
+	display: inline-block;
+	position: relative;
+}
+
+.navDropdown {
+	background-color: transparent;
+	color: white;
+	font-weight: bold;
+	padding: 5px;
+	font-size: 15px;
+	font-family: GameOfThrones, Helvetica;
+	border: none;
+	cursor: pointer;
+}
+
+.navDropdown:hover {
+	color: white;
+}
+
+.navDropdown:focus {
+	outline: none;
+}
+
+.dropdownContent {
+	display: none;
+	position: absolute;
+	background-color: transparent;
+	z-index: 1;
+}
+
+#dropdownOption {
+	font-family: GameOfThrones, Helvetica;
+	font-size: 12px;
+	color: white;
+	line-height: 1.4rem;
+	text-decoration: none;
+	padding: 5px;
+}
+
+.show {
+	display: block;
+}
+
+.GOT {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	text-align: center;
+	margin-top: 20%;
+}
+
+.gotText {
+	font-family: GameOfThrones, Helvetica;
+	font-size: 5.5rem;
+	font-weight: bold;
+	/* color: rgba(29, 34, 39, 0.808); */
+	color: rgba(255, 255, 255, 0.651);
+}
+
+@media only screen and (max-width: 767px) {
+	.gotText {
+		font-family: GameOfThrones, Helvetica;
+		font-size: 2rem;
+		color: rgba(255, 255, 255, 0.651);
+	}
+}
+
+.footer img {
+	width: 5%;
+	height: auto;
+	opacity: .3;
+	position: absolute;
+	bottom: 16px;
+	right: 10px;
+}
+
+/* Quiz Styling */
+.quiz {
+	background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(imgs/QuizBG.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+h1,
+h3 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: GameOfThrones, Helvetica;
+	color: rgba(255, 255, 255, 0.751);
+	text-shadow: 2px 2px #02020285;
+	margin-top: 25px;
+	margin-bottom: 40px;
+}
+
+.container {
+	display: block;
+	width: 70%;
+	border-radius: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: rgba(255, 255, 255, 0.367);
+	box-shadow: 0 0 10px 2px;
+	overflow: auto;
+}
+
+.questionContainer {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+	background-color: rgba(255, 255, 255, 0.588);
+	width: 65%;
+	border-radius: 10px;
+	overflow: auto;
+	text-align: center;
+	padding: 20px;
+	font-family: Helvetica;
+	box-shadow: 1px 2px 5px;
+}
+
+.answerContainer {
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	gap: 10px;
+	margin: 20px 10px;
+}
+
+.btn {
+	border: none;
+	background-color: rgba(255, 255, 255, 0.789);
+	border-radius: 5px;
+	padding: 15px 20px;
+	font-family: Helvetica;
+	box-shadow: 1px 2px 5px;
+}
+
+.btn:hover {
+	color: white;
+	background-color: black;
+}
+
+.btn:focus {
+	outline: none;
+}
+
+.correct {
+	background-color: green;
+	color: rgb(2, 53, 2);
+	pointer-events: none;
+}
+
+.wrong {
+	background-color: red;
+	color: rgb(99, 6, 6);
+	pointer-events: none;
+}
+
+.controls {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.hide {
+	display: none;
+}
+
+.scoreDisplay {
+	display: block;
+	margin-left: 80%;
+}
+
+/* Cast */
+.cast-header {
+	font-family: GameOfThrones, Helvetica;
+}
+
+.cast-section-header {
+	font-family: GameOfThrones, Helvetica;
+	position: absolute;
+	margin: 0;
+	left: 10%;
+}
+
+.cast {
+	padding: 0;
+	margin: 0;
+	color: white;
+}
+
+.card {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	height: 350px;
+	width: 300px;
+	min-width: 250px;
+	padding: 1.5rem;
+	border-radius: 16px;
+	background: rgba(0, 0, 0, 0.973);
+	box-shadow: -1rem 0 1rem rgba(255, 255, 255, 0.062);
+	transition: .2s;
+}
+
+.card-container {
+	display: flex;
+	padding: 2.5rem;
+	overflow-x: scroll;
+}
+
+.card-container::-webkit-scrollbar {
+	width: 12px;
+	height: 12px;
+}
+
+.card-container::-webkit-scrollbar-thumb {
+	background: black;
+	border-radius: 10px;
+	box-shadow: inset 2px 2px 2px rgb(255, 255, 255), inset -2px -2px 2px rgba(255, 255, 255, 0.25);
+}
+
+.card-container::-webkit-scrollbar-track {
+	background: linear-gradient(90deg, #ffffff, #ffffff 1px, #000000 0, #000000);
+}
+
+.card:hover {
+	transform: translateY(-1rem);
+}
+
+.card:hover ~ .card {
+	transform: translateX(130px);
+}
+
+.card:not(:first-child) {
+	margin-left: -130px;
+}
+
+.card-header {
+	position: relative;
+	display: grid;
+	grid-template-rows: auto auto;
+	align-items: center;
+	margin: 1rem 0 0;
+}
+
+.card img {
+	width: 250px;
+	border-radius: 10px;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+.card-header h3,
+h4 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	margin-top: 5px;
+	margin-bottom: 0;
+}
+
+.card-header h5 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	margin-top: 15px;
+	margin-bottom: 0;
+}
+
+.card-links {
+	display: flex;
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+	bottom: 0;
+	left: 3%;
+}
+
+.card-links a {
+	margin-left: 20px;
+	color: white;
+}
+
+.card-links a:hover {
+	color: #7c8f71;
+}
+
+.cast-recurring {
+	margin-top: 15px;
+}
